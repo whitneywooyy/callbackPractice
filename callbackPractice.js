@@ -8,7 +8,7 @@ Below is a sample problem
    });
    
 
-and what you should write is the favNum function that makes the code above work, 
+and what you should write is the sayHi function that makes the code above work, 
     
     
    var sayHi = function(str, cb){
@@ -25,8 +25,13 @@ and what you should write is the favNum function that makes the code above work,
 
 
   //Code Here for first
+
+var first = function(arr, callBack1) {
+  callBack1(arr[0]);
+};
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 first(names, function(firstName){
   console.log('The first name in names is ', firstName)
 });
