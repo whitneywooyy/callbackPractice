@@ -159,8 +159,9 @@ var each = function(x, callBack6) {
     for (var i = 0; i < x.length; i++) {
         var itemAt = x[i];
         var indexAt = i;
+        callBack6(itemAt, indexAt);
     }
-    return callBack6(itemAt, indexAt);
+    
 }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
