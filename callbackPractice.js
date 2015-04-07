@@ -87,11 +87,23 @@ multiply(4, 3, function(answer){
 
   //Code Here for contains
 
+var contains = function(x, y, callBack4) {
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] === y) {
+            console.log(y);
+            return callBack4(true);
+        }
+    }
+    return callBack4(false);
+};
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 contains(names, 'Colt', function(result){
-  if(result === true){
+  if (result === true) {
     console.log('Colt is in the array');
-  } else {
+  } 
+  else {
     console.log('Colt is not in the array');
   }
 });
