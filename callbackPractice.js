@@ -155,7 +155,16 @@ uniq(names, function(uniqArr){
 
     //Code Here for each
 
+var each = function(x, callBack6) {
+    for (var i = 0; i < x.length; i++) {
+        var itemAt = x[i];
+        var indexAt = i;
+    }
+    return callBack6(itemAt, indexAt);
+}
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
 });
