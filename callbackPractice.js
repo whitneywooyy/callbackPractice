@@ -181,6 +181,17 @@ each(names, function(item, indice){
 
  //code here for getUserById
 
+var getUserById = function(x, y, callBack7) {
+    //for (var i = 0; i < x.length; i++) {
+    for (var key in x) {
+        if (x[key].id === y) {
+            return callBack7(x[key]);            
+        }
+    }
+    return false;
+    
+};
+
 var users = [
   {
     id: '12d',
