@@ -138,6 +138,35 @@ var uniq = function(x, callBack5) {
     return callBack5(newArr);
 }
 
+// OR
+
+// var uniq = function(arr, cb) {
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
+//       arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+//   return cb(arr);
+// };
+
+// OR
+
+// var uniq = function(arr, cb) {
+//   var tracker = {};
+//   for (var i = 0; i < arr.length; i++) {
+//     if (tracker[arr[i]] === undefined) {
+//       tracker[arr[i]] = true;
+//     } 
+//     else {
+//       arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+//   return cb(arr);
+// };
+
+
 var names = ['Tyler', 'Ryan', 'Colt', 'Tyler', 'Cahlan', 'Blaine', 'Cahlan'];
 
 uniq(names, function(uniqArr){
@@ -160,6 +189,8 @@ var each = function(x, callBack6) {
         var itemAt = x[i];
         var indexAt = i;
         callBack6(itemAt, indexAt);
+        // OR:
+        // callBack6(x[i], i)
     }
     
 }
@@ -190,8 +221,7 @@ var getUserById = function(x, y, callBack7) {
         }
     }
     return false;
-    
-};
+}
 
 var users = [
   {
